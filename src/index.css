@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .menu-link {
+        @apply text-[14px] font-medium text-white py-3 px-5 flex items-center capitalize bg-secondary hover:bg-primary hover:text-black;
+    }
+    .menu-link-active {
+        @apply text-[14px] font-medium py-3 px-5 flex items-center capitalize bg-primary text-black;
+    }
+    .sub-menu-link {
+        @apply text-[14px] font-medium py-3 px-5 flex items-center capitalize text-black bg-white hover:bg-gray-300;
+    }
+    .main-menu {
+        @apply px-[10px] py-5 capitalize font-bold text-white hover:bg-primary hover:text-black;
+    }
+    .main-menu-active {
+        @apply px-[10px] py-5 capitalize font-bold text-black bg-primary;
+    }
+    .btnCTA {
+        @apply p-[10px] bg-white border-[0.5px] border-black  hover:bg-primary hover:border-primary text-black w-fit;
+    }
+    .roadList {
+        @apply w-full px-11 py-10  list-inside;
+        
+    }
+    .listRoad{
+        @apply flex gap-[11px];
+    }
+    .roadList .listRoad::before{
+        content: url('./assets/checkMark.svg');
+    }
+    .list-classic {
+        @apply list-disc list-inside;
+    }
+    .list-classic li{
+        @apply text-base;
+    }
+    .list-classic p{
+        @apply mb-3 font-light;
+    }
+}
+
+@layer base{
+    body {
+        @apply text-[14px];
+    }
+    button {
+        @apply bg-primary p-[10px] hover:bg-[#C1C513] text-black;
+    }
+    h3 {
+        @apply text-2xl font-semibold uppercase ;
+    }
+    h2, h3{
+        @apply after:content-[''] after:block after:w-[59px] after:h-[7px] after:bg-primary after:mt-2;
+    }
+    h2 {
+        @apply uppercase text-[32px] text-black mb-7;
+    }
+}
